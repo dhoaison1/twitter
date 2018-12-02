@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Test VN</title>
+
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+
+  <link href="./css/test.css" rel="stylesheet">
+
+  <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="">
+<!-- nav bar -->
+<div id="menu" class="row bg-lightc">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light textNav " style="width: 100%;">
+    <div class="collapse navbar-collapse" >
+      <ul class="navbar-nav mr-5 font-weight-bold sticky-top">
+        <li class="nav-item ml-5">
+          <a class="nav-link text-dark iconWeb" href="#"></a>
+        </li>
+        <li class="nav-item mr-1">
+          <a class="nav-link text-dark" href="#">Home </a>
+        </li>
+        <li class="nav-item mr-1 ">
+            <a class="nav-link text-dark" href="#">About</a>
+          </li>
+        <li class="nav-item align-textbox-Search" style="position: relative;
+        float: right;">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 border-customize" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </li>
+        
+        <li class="nav-item dropdown no-arrow ml-2" style="position: relative;
+        float: right;">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-circle fa-fw" ></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="#">log out</a>
+            <a class="dropdown-item" href="#">Log in</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Setting</a>
+          </div>
+        </li>
+        <li class="nav-item alignRignt accoutInfor ">
+            <div>Ngoc Bui</div>     
+        </li>
+        
+        <li class="nav-item dropdown no-arrow" style="position: relative;
+        float: right;">
+          <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-envelope fa-fw"></i>
+            <span class="badge badge-danger">4+</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+       
+      
+      </ul>
+      
+    </div>
+    
+  </nav>
+</div>
+<!-- nar bar -->
+
+<!-- content -->
+<div id="PictureTitel">
+</div>
+
+<!--avatar-->
+<div class="">
+    <div id="ava" class="rounded-circle offset-1" style="background-image: url(./images/chalee.jpg);z-index: 3;position: relative;">
+    </div>
+    <div >
+
+    </div>
+</div>
+<!--avatar-->
+
+<!--header-->
+<div class="row mt-0">
+<div class="col-3"></div>
+<div class="col-6">
+  <div class="row">
+    <div class="col-2 text-center font-weight-bold">Tweet</div>
+    <div class="col-2 text-center font-weight-bold">Following</div>
+    <div class="col-2 text-center font-weight-bold">Follower</div>
+    <div class="col-2 text-center font-weight-bold">Favorite</div>
+    <div class="col-2 text-center font-weight-bold">List</div>
+    <div class="col-2 text-center font-weight-bold">Moment</div>
+  </div>
+  <div class="row">
+    <div class="col-2 text-center font-weight-bold text-success">23 N</div>
+    <div class="col-2 text-center font-weight-bold text-success">1,081</div>
+    <div class="col-2 text-center font-weight-bold text-success">71 Rep</div>
+    <div class="col-2 text-center font-weight-bold text-success">2.317</div>
+    <div class="col-2 text-center font-weight-bold text-success">1</div>
+    <div class="col-2 text-center font-weight-bold text-success">4</div>
+  </div>
+</div>
+<div class="col-3">
+  <div class="float-left">
+    <button class="border-customize btn btn-outline-danger font-weight-bold" style="width: 146px;" >Follow</button>
+  </div>
+</div>
+</div>
+<hr style="padding-bottom: 0px;margin-bottom: 0px;">
+<!--header-->
+
+<!--content-->
+
+<div id="content" class="row mt-0">
+  <div class="col-3 float-left">
+    <h5 class="UserName mb-3 font-weight-bold" title="user-name">Ngoc Bui</h5>
+    <div class="row mb-2 " title="description">I want eat chao sã dịt kkk</div>
+    <div class="row mb-2 " title="Location">Toc truong mien nui - Quang Ngai</div>
+    <div class="row mb-2" title="Times of register">Involved  6th February, 2018</div>
+    <div class="row mb-2" title="Times of register">Study in university of science</div>
+    <a href="#">Photos and videos</a>
+  </div>
+  <div class="col-6 bg-newfeed">
+    <div class="row">
+    <div class="col-2 text-center font-weight-bold text-danger">Tweet </div>
+    <div class="col-3 text-center font-weight-bold text-danger">Tweet & reply </div>
+    <div class="col-2 text-center font-weight-bold text-danger">Vehicle</div>
+    <div class="col-1 "></div>
+    <div class="col-2 "></div>
+    <div class="col-2 "></div>
+    </div>
+    <hr>
+    <!--new feed -->
+    <div class="row bg-newfeed" >
+      <div class="col-1 icon-newfeed rounded-circle" style="background-image: url(./images/chalee.jpg);"></div>
+      <div class="col-11">
+        <!--name and time user of new feed-->
+        <div class="row">
+          Ngoc Bui - November 30
+        </div>
+        <!--conten of new feed-->
+        <div class="row">
+            Thread! There's still time to support our 5 featured #YouTubeGiving charities—click the "donate" button to the right of each video to make a difference in someone's life.
+            Imagine if you couldn’t watch the videos you love. We support copyright reform with an Article 13 that works for everyone. 
+        </div>
+        <hr>
+        <!--action react with newfeed-->
+        <div class="row">
+          <div class="col-2 ">
+              <span class="glyphicon glyphicon-heart"></span>
+            69 </div>
+          <div class="col-2">
+              <span class="glyphicon glyphicon-refresh"></span>
+            32</div>
+            <div class="col-2">
+                <span class="glyphicon glyphicon-thumbs-down"></span>
+              32</div>
+              <div class="col-2">
+                  <span class="glyphicon glyphicon-hand-right"></span>
+                32</div>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <!--new feed -->
+    
+  </div>
+  <div class="col-3">
+    <div class="float-left">
+      <div class="row bg-newfeed p-3">
+        <h5>New to Twitter?</h5>
+        <div >Sign up now to have your personal timeline!</div> <br>
+        <button class="border-customize btn btn-danger font-weight-bold" style="width: 270px;" >Registration</button>
+      </div>
+
+      <!--next section-->
+      <div class="bg-newfeed pl-3 mt-1">
+        <div class="">
+          <h5> You might also like ·</h5>
+          <div class="row mb-1">          
+                <div class=" icon-newfeed rounded-circle" style="background-image: url(./images/1.PNG);"></div>
+                <a href="#" class="ml-1">Chali putt</a>
+          </div>
+          <br>
+          <div class="row mb-1">          
+              <div class=" icon-newfeed rounded-circle" style="background-image: url(./images/5l.jpg);"></div>
+              <a  href="#" class="ml-1">Tung oc cho</a>
+          </div>
+          <br>
+        <div class="row mb-1">          
+            <div class=" icon-newfeed rounded-circle" style="background-image: url(./images/1.PNG);"></div>
+            <a  href="#" class="ml-1">Son doan ngu</a>
+      </div>
+      <br>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<!--content-->
+<!-- Bootstrap core JavaScript-->
+</div>
+<script src="./js/test.js"></script>
+ <!-- Bootstrap core JavaScript-->
+ <script src="vendor/jquery/jquery.min.js"></script>
+ <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Core plugin JavaScript-->
+ <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+</html>
