@@ -105,7 +105,7 @@ body{
 }
 .bg-newfeed{
     background-color:white;
-    z-index: 5;
+    z-index: 4;
     position: relative;
     padding-left: 0px;
     padding-right: 0px;
@@ -117,4 +117,13 @@ body{
     background-position:center;
     background-repeat:no-repeat;
     background-size: cover;
+}
+.fillPicture{
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.slogan{
+    font-family: Arial;
+    color: deeppink;
 }

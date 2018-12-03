@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Test VN</title>
+  <title>Twitte</title>
 
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 
   <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<script src="https://use.fontawesome.com/e93ed60e29.js"></script>
 </head>
 
 <body>
@@ -113,12 +113,12 @@
 <div class="col-3"></div>
 <div class="col-6">
   <div class="row">
-    <div class="col-2 text-center font-weight-bold">Tweet</div>
-    <div class="col-2 text-center font-weight-bold">Following</div>
-    <div class="col-2 text-center font-weight-bold">Follower</div>
-    <div class="col-2 text-center font-weight-bold">Favorite</div>
-    <div class="col-2 text-center font-weight-bold">List</div>
-    <div class="col-2 text-center font-weight-bold">Moment</div>
+    <a href="#" class="col-2 text-center font-weight-bold">Tweet</a>
+    <a href="#" class="col-2 text-center font-weight-bold">Following</a>
+    <a href="#" class="col-2 text-center font-weight-bold">Follower</a>
+    <a href="#" class="col-2 text-center font-weight-bold">Favorite</a>
+    <a href="#" class="col-2 text-center font-weight-bold">List</a>
+    <a href="#" class="col-2 text-center font-weight-bold">Moment</a>
   </div>
   <div class="row">
     <div class="col-2 text-center font-weight-bold text-success">23 N</div>
@@ -141,19 +141,54 @@
 <!--content-->
 
 <div id="content" class="row mt-0">
+  <!--content side left-->
   <div class="col-3 float-left">
     <h5 class="UserName mb-3 font-weight-bold" title="user-name">Ngoc Bui</h5>
-    <div class="row mb-2 " title="description">I want eat chao sã dịt kkk</div>
-    <div class="row mb-2 " title="Location">Toc truong mien nui - Quang Ngai</div>
-    <div class="row mb-2" title="Times of register">Involved  6th February, 2018</div>
-    <div class="row mb-2" title="Times of register">Study in university of science</div>
-    <a href="#">Photos and videos</a>
+    <div class="row mb-2 " title="description">  <i class="fab fa-accessible-icon mr-1 mt-1"></i>
+      I want eat chao sã dịt kkk</div>
+    <div class="row mb-2 " title="Location"><i class="fa fa-home mr-1 mt-1" aria-hidden="true"></i>
+      Toc truong mien nui - Quang Ngai</div>
+    <div class="row mb-2" title="Times of register"><i class="fa fa-calendar mr-1 mt-1" aria-hidden="true"></i>
+      Involved  6th February, 2018</div>
+    <div class="row mb-2" title="Times of register"><i class="fa fa-graduation-cap mr-1 mt-1" aria-hidden="true"></i>
+      Study in university of science</div>
+    <a href="#"><i class="fa fa-picture-o mr-1 mt-1" aria-hidden="true"></i>Photos and videos</a>
+<!--section picture or album-->
+    <div class="row " style="height: 80px;">
+      <div class="col-3 mr-1 rounded fillPicture" style="background-image: url(./images/2l.jpg);">
+      </div>
+      <div class="col-3 mr-1 rounded fillPicture" style="background-image: url(./images/3l.jpg);">
+        </div>
+        <div class="col-3 mr-1 rounded fillPicture" style="background-image: url(./images/4l.jpg);">
+          </div>
+    </div>
+    <div class="row mt-1" style="height: 80px;">
+        <div class="col-3 mr-1 rounded fillPicture" style="background-image: url(./images/5l.jpg);">
+          </div>
+          <div class="col-3 mr-1 rounded fillPicture" style="background-image: url(./images/6l.jpg);">
+            </div>
+            <div class="col-3 mr-1 rounded fillPicture" style="background-image: url(./images/7l.jpg);">
+              </div>
+    </div>
+    <div class="row mt-1" style="height: 80px;">
+        <div class="col-3 mr-1 rounded fillPicture" style="background-image: url(./images/5l.jpg);">
+          </div>
+          <div class="col-3 mr-1 rounded fillPicture" style="background-image: url(./images/6l.jpg);">
+            </div>
+            <div class="col-3 mr-1 rounded fillPicture" style="background-image: url(./images/7l.jpg);">
+              </div>
+    </div>
+    <hr>
+    <div class="text-center font-weight-bold slogan" style="font-size: 30px">Make your life more beautifull</div>
   </div>
+   <!--content side left-->
+
+    <!--content main-->
   <div class="col-6 bg-newfeed">
     <div class="row">
-    <div class="col-2 text-center font-weight-bold text-danger">Tweet </div>
-    <div class="col-3 text-center font-weight-bold text-danger">Tweet & reply </div>
-    <div class="col-2 text-center font-weight-bold text-danger">Vehicle</div>
+    <a href="#" class="col-2 text-center font-weight-bold text-danger">Tweet </a>
+    <a href="#" class="col-3 text-center font-weight-bold text-danger">Tweet & reply </a>
+    <a href="#" class="col-2 text-center font-weight-bold text-danger">Vehicle</a>
     <div class="col-1 "></div>
     <div class="col-2 "></div>
     <div class="col-2 "></div>
@@ -161,10 +196,10 @@
     <hr>
     <!--new feed -->
     <div class="row bg-newfeed" >
-      <div class="col-1 icon-newfeed rounded-circle" style="background-image: url(./images/chalee.jpg);"></div>
+      <div class="col-1 pb-3 icon-newfeed rounded-circle" style="background-image: url(./images/chalee.jpg);height: 50px;"></div>
       <div class="col-11">
         <!--name and time user of new feed-->
-        <div class="row">
+        <div class="row text-primary">
           Ngoc Bui - November 30
         </div>
         <!--conten of new feed-->
@@ -176,36 +211,86 @@
         <!--action react with newfeed-->
         <div class="row">
           <div class="col-2 ">
-              <span class="glyphicon glyphicon-heart"></span>
-            69 </div>
-          <div class="col-2">
-              <span class="glyphicon glyphicon-refresh"></span>
-            32</div>
+              <a href="#" style="text-decoration: none;" class="fa fa-commenting-o" aria-hidden="true"></a>
+              69 </div>
             <div class="col-2">
-                <span class="glyphicon glyphicon-thumbs-down"></span>
+                <a href="#" style="text-decoration: none;"  class="fa fa-heartbeat" aria-hidden="true"></a>
               32</div>
               <div class="col-2">
-                  <span class="glyphicon glyphicon-hand-right"></span>
+                  <a href="#" style="text-decoration: none;"  class="fa fa-share-alt-square" aria-hidden="true"></a>
                 32</div>
+                <div class="col-2">
+                    <a href="#" style="text-decoration: none;"  class="fa fa-thumbs-o-up" aria-hidden="true"></a>
+                  32</div>
+                  <div class="col-2">
+                      <a href="#" style="text-decoration: none;" class="fa fa-thumbs-o-down" aria-hidden="true"></a>
+                    32</div>
         </div>
         <hr>
       </div>
+     
     </div>
+    <hr>
     <!--new feed -->
     
+     <!--new feed 2 -->
+     <div class="row bg-newfeed" >
+        <div class="col-1 pb-3 icon-newfeed rounded-circle" style="background-image: url(./images/girl.jpg);height: 50px;"></div>
+        <div class="col-11">
+          <!--name and time user of new feed-->
+          <div class="row text-primary">
+            Ngoc Bui - November 30
+          </div>
+          <!--conten of new feed-->
+          <div class="row">
+              Dit khong anh son ahihi!!
+              Thread! There's still time to support our 5 featured #YouTubeGiving charities—click the "donate" button to the right of each video to make a difference in someone's life.
+              Imagine if you couldn’t watch the videos you love. We support copyright reform with an Article 13 that works for everyone. 
+          </div>
+          <hr>
+          <!--action react with newfeed-->
+          <div class="row">
+            <div class="col-2 ">
+                <a href="#" style="text-decoration: none;" class="fa fa-commenting-o" aria-hidden="true"></a>
+              69 </div>
+            <div class="col-2">
+                <a href="#" style="text-decoration: none;"  class="fa fa-heartbeat" aria-hidden="true"></a>
+              32</div>
+              <div class="col-2">
+                  <a href="#" style="text-decoration: none;"  class="fa fa-share-alt-square" aria-hidden="true"></a>
+                32</div>
+                <div class="col-2">
+                    <a href="#" style="text-decoration: none;"  class="fa fa-thumbs-o-up" aria-hidden="true"></a>
+                  32</div>
+                  <div class="col-2">
+                      <a href="#" style="text-decoration: none;" class="fa fa-thumbs-o-down" aria-hidden="true"></a>
+                    32</div>
+          </div>
+          <hr>
+        </div>
+       
+      </div>
+      <hr>
+
+      <!--new feed 2 -->
+
   </div>
+
+   <!--content main-->
+
+    <!--content side right-->
   <div class="col-3">
     <div class="float-left">
       <div class="row bg-newfeed p-3">
         <h5>New to Twitter?</h5>
         <div >Sign up now to have your personal timeline!</div> <br>
-        <button class="border-customize btn btn-danger font-weight-bold" style="width: 270px;" >Registration</button>
+        <button class="border-customize btn btn-danger font-weight-bold mt-1" style="width: 270px;" >Registration</button>
       </div>
 
       <!--next section-->
-      <div class="bg-newfeed pl-3 mt-1">
+      <div class="bg-newfeed pl-3 mt-2 pt-2">
         <div class="">
-          <h5> You might also like ·</h5>
+          <h5 class=""> You might also like </h5>
           <div class="row mb-1">          
                 <div class=" icon-newfeed rounded-circle" style="background-image: url(./images/1.PNG);"></div>
                 <a href="#" class="ml-1">Chali putt</a>
@@ -224,8 +309,32 @@
      
         </div>
       </div>
+
+<!--trend in the world-->
+<div class="bg-newfeed pl-3 mt-2 pt-2">
+    <div class="">
+      <h5 class=""> Trends in the whole world</h5>
+    <a href="#" class="text-danger font-weight-bold mt-1">#Happy Monday</a>
+    <div class="row text-dark "> 42,5 N Tweet</div>
+    <a href="#" class="text-danger font-weight-bold mt-1">#OurEpiphanyJin</a>
+    <div class="row text-dark "> 25,5 N Tweet</div>
+    <a href="#" class="text-danger font-weight-bold mt-1"># 3aralıkdünyaengellilerg the</a>
+    <div class="row text-dark "> 141 N Tweet</div>
+    <a href="#" class="text-danger font-weight-bold mt-1">#MondayMotivation</a>
+    <div class="row text-dark "> 118 N Tweet</div>
+    <a href="#" class="text-danger font-weight-bold mt-1">Alan García</a>
+    <div class="row text-dark "> 24,8 N Tweet</div>
+    <a href="#" class="text-danger font-weight-bold mt-1">Paul McCartney</a>
+    <div class="row text-dark "> 42,5 N Tweet</div>
     </div>
   </div>
+
+    </div>
+  </div>
+ <!--content side right-->
+
+
+
   </div>
 <!--content-->
 <!-- Bootstrap core JavaScript-->
