@@ -5,7 +5,6 @@ class UserProfile extends Component {
     render() { 
         return ( 
             <div>
-
                 {/* user infor */}
                 <div id="PictureTitel">
                 </div>
@@ -38,7 +37,7 @@ class UserProfile extends Component {
                     </div>
                     <div className="col-3">
                         <div className="float-left">
-                            <button className="border-customize btn btn-outline-danger font-weight-bold" style={{ width: "146px" }} >Follow</button>
+                            <button className="border-customize btn btn-outline-danger font-weight-bold" style={{ width: "146px" }} >Edit Profile</button>
                         </div>
                     </div>
                 </div>
