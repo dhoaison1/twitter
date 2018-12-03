@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../style/images/chalee.jpg'
+
 class UserProfile extends Component {
     state = {  }
     render() { 
@@ -13,7 +13,6 @@ class UserProfile extends Component {
                     <div id="ava" className="rounded-circle offset-1" style={{ backgroundImage: "url('images/chalee.jpg')", zIndex: "3", position: "relative" }}>
                     </div>
                     <div >
-
                     </div>
                 </div>
 
