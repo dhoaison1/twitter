@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class UserProfile extends Component {
-    state = {  }
+    state = {
+        user: {}
+    }
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if(nextProps.user) {
+            return {
+                user: nextProps.user
+            }
+        }
+        return null;
+    }
     render() { 
+        const { user} = this.state;
+        console.log(user);
         return ( 
             <div>
                 {/* user infor */}
@@ -27,17 +40,17 @@ class UserProfile extends Component {
                             <div className="col-2 text-center font-weight-bold">Moment</div>
                         </div>
                         <div className="row">
-                            <div className="col-2 text-center font-weight-bold text-success">23 N</div>
-                            <div className="col-2 text-center font-weight-bold text-success">1,081</div>
-                            <div className="col-2 text-center font-weight-bold text-success">71 Rep</div>
-                            <div className="col-2 text-center font-weight-bold text-success">2.317</div>
-                            <div className="col-2 text-center font-weight-bold text-success">1</div>
-                            <div className="col-2 text-center font-weight-bold text-success">4</div>
+                            <div className="col-2 text-center font-weight-bold text-success">{user.tweet.number} </div>
+                            <div className="col-2 text-center font-weight-bold text-success">{user.tweet.following}</div>
+                            <div className="col-2 text-center font-weight-bold text-success">{user.tweet.follower}</div>
+                            <div className="col-2 text-center font-weight-bold text-success">{user.tweet.favorite}</div>
+                            <div className="col-2 text-center font-weight-bold text-success">{user.tweet.list}</div>
+                            <div className="col-2 text-center font-weight-bold text-success">{user.tweet.moment}</div>
                         </div>
                     </div>
                     <div className="col-3">
                         <div className="float-left">
-                            <button className="border-customize btn btn-outline-danger font-weight-bold" style={{ width: "146px" }} >Edit Profile</button>
+                            <Link to="/edit"><button className="border-customize btn btn-outline-danger font-weight-bold" style={{ width: "146px" }} >Edit Profile</button></Link>
                         </div>
                     </div>
                 </div>
@@ -49,11 +62,11 @@ class UserProfile extends Component {
 
                 <div id="content" className="row mt-0">
   <div className="col-3 float-left" style={{marginLeft: 15}}>
-    <h5 className="UserName mb-3 font-weight-bold" title="user-name">Ngoc Bui</h5>
-    <div className="row mb-2 " title="description">I want eat chao sã dịt kkk</div>
-    <div className="row mb-2 " title="Location">Toc truong mien nui - Quang Ngai</div>
+    <h5 className="UserName mb-3 font-weight-bold" title="user-name">{user.username}</h5>
+    <div className="row mb-2 " title="description">{user.description}</div>
+    <div className="row mb-2 " title="Location">{user.location}</div>
     <div className="row mb-2" title="Times of register">Involved  6th February, 2018</div>
-    <div className="row mb-2" title="Times of register">Study in university of science</div>
+    <div className="row mb-2" title="school">{user.school}</div>
     <a href="#">Photos and videos</a>
   </div>
   <div className="col-6 bg-newfeed">
@@ -65,8 +78,8 @@ class UserProfile extends Component {
     <div className="col-2 "></div>
     <div className="col-2 "></div>
     </div>
-    <div className="row bg-newfeed">
-      <div className="col-1 icon-newfeed rounded-circle" style={{"background-image": "url(images/chalee.jpg)"}}></div>
+    {/* <div className="row bg-newfeed">
+      <div className="col-1 icon-newfeed rounded-circle" style={{"backgroundImage": "url(images/chalee.jpg)"}}></div>
       <div className="col-11">
         <div className="row">
           Ngoc Bui - November 30
@@ -90,7 +103,7 @@ class UserProfile extends Component {
                 32</div>
         </div>
       </div>
-    </div>
+    </div> */}
     
   </div>
   <div className="col-3">

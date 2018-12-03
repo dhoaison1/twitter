@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 
 class Navbar extends Component {
-    state = {  }
+    state = {
+        user: {}
+    }
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if(nextProps.user) {
+            return {
+                user: nextProps.user
+            }
+        }
+        return null;
+    }
     render() { 
+        const { user } = this.state;
         return ( 
             //
               <div id="menu" className="row bg-lightc">
@@ -39,7 +50,7 @@ class Navbar extends Component {
                       </div>
                       </li>
                       <li className="nav-item alignRignt accoutInfor ">
-                          <div>Ngoc Bui</div>     
+                          <div>{user.username}</div>     
                       </li>
                       
                       <li className="nav-item dropdown no-arrow" style={{position: "relative",
