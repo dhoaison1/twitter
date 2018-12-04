@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
     state = {
@@ -24,7 +25,7 @@ class Navbar extends Component {
                       <a className="nav-link text-dark iconWeb" href="#"></a>
                       </li>
                       <li className="nav-item mr-1">
-                      <a className="nav-link text-dark" href="#">Home </a>
+                      <Link className="nav-link text-dark" href="#" to='/'>Home </Link>
                       </li>
                       <li className="nav-item mr-1 ">
                           <a className="nav-link text-dark" href="#">About</a>
@@ -49,9 +50,11 @@ class Navbar extends Component {
                           <a className="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Setting</a>
                       </div>
                       </li>
-                      <li className="nav-item alignRignt accoutInfor ">
-                          <div>{user.username}</div>     
-                      </li>
+                            <Link to='/user'>
+                                <li className="nav-item alignRignt accoutInfor ">
+                                    <div style={{color: 'black', textDecoration: 'none'}}>{user.username}</div>
+                                </li>
+                            </Link>
                       
                       <li className="nav-item dropdown no-arrow" style={{position: "relative",
                       float: "right"}}>

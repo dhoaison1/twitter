@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PostDetail from '../container/postDetail';
 
 class UserProfile extends Component {
     state = {
@@ -17,7 +18,7 @@ class UserProfile extends Component {
         const { user} = this.state;
         console.log(user);
         return ( 
-            <div>
+                 <div>
                 {/* user infor */}
                 <div id="PictureTitel">
                 </div>
@@ -33,7 +34,7 @@ class UserProfile extends Component {
                     <div className="col-6">
                         <div className="row">
                             <div className="col-2 text-center font-weight-bold">Tweet</div>
-                            <div className="col-2 text-center font-weight-bold">Following</div>
+                            <div className="col-2 text-center font-weight-bold"><Link to="/user/following" style={{textDecoration: 'none'}}>Following</Link></div>
                             <div className="col-2 text-center font-weight-bold">Follower</div>
                             <div className="col-2 text-center font-weight-bold">Favorite</div>
                             <div className="col-2 text-center font-weight-bold">List</div>
@@ -50,7 +51,7 @@ class UserProfile extends Component {
                     </div>
                     <div className="col-3">
                         <div className="float-left">
-                            <Link to="/edit"><button className="border-customize btn btn-outline-danger font-weight-bold" style={{ width: "146px" }} >Edit Profile</button></Link>
+                            <Link to="/user/edit"><button className="border-customize btn btn-outline-danger font-weight-bold" style={{ width: "146px" }} >Edit Profile</button></Link>
                         </div>
                     </div>
                 </div>
@@ -61,85 +62,60 @@ class UserProfile extends Component {
                 {/* content */}
 
                 <div id="content" className="row mt-0">
-  <div className="col-3 float-left" style={{marginLeft: 15}}>
-    <h5 className="UserName mb-3 font-weight-bold" title="user-name">{user.username}</h5>
-    <div className="row mb-2 " title="description">{user.description}</div>
-    <div className="row mb-2 " title="Location">{user.location}</div>
-    <div className="row mb-2" title="Times of register">Involved  6th February, 2018</div>
-    <div className="row mb-2" title="school">{user.school}</div>
-    <a href="#">Photos and videos</a>
-  </div>
-  <div className="col-6 bg-newfeed">
-    <div className="row">
-    <div className="col-2 text-center font-weight-bold text-danger">Tweet </div>
-    <div className="col-3 text-center font-weight-bold text-danger">Tweet & reply </div>
-    <div className="col-2 text-center font-weight-bold text-danger">Vehicle</div>
-    <div className="col-1 "></div>
-    <div className="col-2 "></div>
-    <div className="col-2 "></div>
-    </div>
-    {/* <div className="row bg-newfeed">
-      <div className="col-1 icon-newfeed rounded-circle" style={{"backgroundImage": "url(images/chalee.jpg)"}}></div>
-      <div className="col-11">
-        <div className="row">
-          Ngoc Bui - November 30
-        </div>
-        <div className="row">
-            Thread! There's still time to support our 5 featured #YouTubeGiving charities—click the "donate" button to the right of each video to make a difference in someone's life.
-            Imagine if you couldn’t watch the videos you love. We support copyright reform with an Article 13 that works for everyone. 
-        </div>
-        <div className="row">
-          <div className="col-2 ">
-              <span className="glyphicon glyphicon-heart"></span>
-            69 </div>
-          <div className="col-2">
-              <span className="glyphicon glyphicon-refresh"></span>
-            32</div>
-            <div className="col-2">
-                <span className="glyphicon glyphicon-thumbs-down"></span>
-              32</div>
-              <div className="col-2">
-                  <span className="glyphicon glyphicon-hand-right"></span>
-                32</div>
-        </div>
-      </div>
-    </div> */}
+                    <div className="col-3 float-left" style={{ marginLeft: 15 }}>
+                        <h5 className="UserName mb-3 font-weight-bold" title="user-name">{user.username}</h5>
+                        <div className="row mb-2 " title="description">{user.description}</div>
+                        <div className="row mb-2 " title="Location">{user.location}</div>
+                        <div className="row mb-2" title="Times of register">Involved  6th February, 2018</div>
+                        <div className="row mb-2" title="school">{user.school}</div>
+                        <a href="#">Photos and videos</a>
+                    </div>
+                    <div className="col-6 bg-newfeed">
+                        <div className="row">
+                            <div className="col-2 text-center font-weight-bold text-danger">Tweet </div>
+                            <div className="col-3 text-center font-weight-bold text-danger">Tweet & reply </div>
+                            <div className="col-2 text-center font-weight-bold text-danger">Vehicle</div>
+                            <div className="col-1 "></div>
+                            <div className="col-2 "></div>
+                            <div className="col-2 "></div>
+                        </div>
+                        <PostDetail></PostDetail>
     
-  </div>
-  <div className="col-3">
-    <div className="float-left">
-      <div className="row bg-newfeed p-3">
-        <h5>New to Twitter?</h5>
-        <div >Sign up now to have your personal timeline!</div> <br/>
-        <button className="border-customize btn btn-danger font-weight-bold" style={{width: "270px"}} >Registration</button>
-      </div>
+                    </div>
+                    <div className="col-3">
+                        <div className="float-left">
+                            <div className="row bg-newfeed p-3">
+                                <h5>New to Twitter?</h5>
+                                <div >Sign up now to have your personal timeline!</div> <br />
+                                <button className="border-customize btn btn-danger font-weight-bold" style={{ width: "270px" }} >Registration</button>
+                            </div>
 
-      <div className="bg-newfeed pl-3 mt-1">
-        <div className="">
-          <h5> You might also like ·</h5>
-          <div className="row mb-1">          
-                <div className=" icon-newfeed rounded-circle" style={{"backgroundImage": "url(images/1.PNG)"}}></div>
-                <a href="#" className="ml-1">Chali putt</a>
-          </div>
-          <br/>
-          <div className="row mb-1">          
-              <div className=" icon-newfeed rounded-circle" style={{"backgroundImage": "url(images/5l.jpg)"}}></div>
-              <a  href="#" className="ml-1">Tung oc cho</a>
-          </div>
-          <br/>
-        <div className="row mb-1">          
-            <div className=" icon-newfeed rounded-circle" style={{"backgroundImage": "url(images/1.PNG)"}}></div>
-            <a  href="#" className="ml-1">Son doan ngu</a>
-      </div>
-      <br/>
-     
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+                            <div className="bg-newfeed pl-3 mt-1">
+                                <div className="">
+                                    <h5> You might also like ·</h5>
+                                    <div className="row mb-1">
+                                        <div className=" icon-newfeed rounded-circle" style={{ "backgroundImage": "url(images/1.PNG)" }}></div>
+                                        <a href="#" className="ml-1">Chali putt</a>
+                                    </div>
+                                    <br />
+                                    <div className="row mb-1">
+                                        <div className=" icon-newfeed rounded-circle" style={{ "backgroundImage": "url(images/5l.jpg)" }}></div>
+                                        <a href="#" className="ml-1">Tung oc cho</a>
+                                    </div>
+                                    <br />
+                                    <div className="row mb-1">
+                                        <div className=" icon-newfeed rounded-circle" style={{ "backgroundImage": "url(images/1.PNG)" }}></div>
+                                        <a href="#" className="ml-1">Son doan ngu</a>
+                                    </div>
+                                    <br />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {/* Enc */}
-</div>
+            </div>
 
          );
     }

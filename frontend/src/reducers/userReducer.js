@@ -18,11 +18,9 @@ const initialState = {
 export default (state = initialState, action) => {
     switch(action.type) {
         case UPDATE_USER_INFOR:
-            console.log('update user infor');
             return {
                 ...action.payload};
         default:
-        console.log('return default');
             return state;
     }
 }
