@@ -24,7 +24,7 @@ class Home extends Component {
 							<div className="row">
 								<div className="col-2 text-center font-weight-bold">Tweet</div>
 								<div className="col-2 text-center font-weight-bold"><Link to="/user/following" style={{textDecoration: 'none'}}>Following</Link></div>
-								<div className="col-2 text-center font-weight-bold">Follower</div>
+								<div className="col-2 text-center font-weight-bold"><Link to="/user/follower" style={{textDecoration: 'none'}}>Follower</Link></div>
 								<div className="col-2 text-center font-weight-bold">Favorite</div>
 								<div className="col-2 text-center font-weight-bold">List</div>
 								<div className="col-2 text-center font-weight-bold">Moment</div>
@@ -54,14 +54,14 @@ class Home extends Component {
 				<div className="col-sm-2">
 					<div className="panel panel-default">
 						<div className="panel-body">
-							<span style={{display: 'table',margin: '0 auto'}} ><img className="rounded-circle" src="images/chalee.jpg" style={{width:100 , height:100}}></img>
+							<span style={{display: 'table',margin: '0 auto'}} ><img className="rounded-circle" src="/images/chalee.jpg" style={{width:100 , height:100}}></img>
 							<p  style={{textAlign: 'center' , fontWeight: 'bold'}}>{user.username}</p>
 							
 							</span>
 							<div className="row">
 									<div className="col-3 text-center font-weight-bold">Tweet</div>
 									<div className="col-4 text-center font-weight-bold"><Link to="/user/following" style={{textDecoration: 'none'}}>Following</Link></div>
-									<div className="col-4 text-center font-weight-bold">Follower</div>
+									<div className="col-4 text-center font-weight-bold"><Link to="/user/follower" style={{textDecoration: 'none'}}>Follower</Link></div>
 								</div>
 								<div className="row">
 									<div className="col-3 text-center font-weight-bold text-success">{user.tweet.number} </div>

@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import PostDetail from '../container/postDetail';
-class Test extends Component {
+import { Link } from 'react-router-dom'
+
+class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			user: props.user
+			user: props.user,
+            following: props.following,
+            follower: props.follower
 		}
 	}
     render() { 
+		console.log(this.state);
 		const { user } = this.state;
-            return ( 
-
-					<div className="" style={{marginLeft:10}}>
+		const { follower } = this.state;
+        return (
+			<div className="" style={{marginLeft:10}}>
 					{/* left panel  */}
 					<div className="row mt-0">
 						<div className="col-3"></div>
 						<div className="col-6">
 							<div className="row">
 								<div className="col-2 text-center font-weight-bold">Tweet</div>
-								<div className="col-2 text-center font-weight-bold">Following</div>
+								<div className="col-2 text-center font-weight-bold"><Link to="/user/following" style={{textDecoration: 'none'}}>Following</Link></div>
 								<div className="col-2 text-center font-weight-bold">Follower</div>
 								<div className="col-2 text-center font-weight-bold">Favorite</div>
 								<div className="col-2 text-center font-weight-bold">List</div>
@@ -50,18 +53,18 @@ class Test extends Component {
 				<div className="col-sm-2">
 					<div className="panel panel-default">
 						<div className="panel-body">
-							<span style={{display: 'table',margin: '0 auto'}} ><img className="rounded-circle" alt={user.username} src="images/chalee.jpg" style={{width:100 , height:100}}></img>
+							<span style={{display: 'table',margin: '0 auto'}} ><img className="rounded-circle" src="/images/chalee.jpg" style={{width:100 , height:100}}></img>
 							<p  style={{textAlign: 'center' , fontWeight: 'bold'}}>{user.username}</p>
 							
 							</span>
 							<div className="row">
 									<div className="col-3 text-center font-weight-bold">Tweet</div>
-									<div className="col-5 text-center font-weight-bold">Following</div>
-									<div className="col-4 text-center font-weight-bold">Follower</div>
+									<div className="col-4 text-center font-weight-bold"><Link to="/user/following" style={{textDecoration: 'none'}}>Following</Link></div>
+									<div className="col-4 text-center font-weight-bold"><Link to="/user/follower" style={{textDecoration: 'none'}}>Follower</Link></div>
 								</div>
 								<div className="row">
 									<div className="col-3 text-center font-weight-bold text-success">{user.tweet.number} </div>
-									<div className="col-5 text-center font-weight-bold text-success">{user.tweet.following}</div>
+									<div className="col-4 text-center font-weight-bold text-success">{user.tweet.following}</div>
 									<div className="col-4 text-center font-weight-bold text-success">{user.tweet.follower}</div>
 								</div>
 						</div>
@@ -83,33 +86,24 @@ class Test extends Component {
 
 					
 				</div>
-				<div className="row col-sm-10">
-							
-							<div class="card col-sm-4" >
-								<img class="card-img-top" src="..." alt="Card image cap"></img>
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="btn btn-primary">Go somewhere</a>
-								</div>
-							</div>
-							<div class="card col-sm-4" >
-								<img class="card-img-top" src="..." alt="Card image cap"></img>
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="btn btn-primary">Go somewhere</a>
-								</div>
-							</div>
-							<div class="card col-sm-4" >
-								<img class="card-img-top" src="..." alt="Card image cap"></img>
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="btn btn-primary">Go somewhere</a>
+				<div className="row col-sm-10" style={{marginTop: 10}}>
+				{
+					follower.map((follower, index) => {
+						return (
+							<div className="card col-sm-4" key={index} >
+								<img className="card-img-top" src={`/images/${follower.headerImage}`} alt="Card image cap"></img>
+								<div className="card-body">
+									<h5 className="card-title">{follower.username}</h5>
+									<p className="card-text">{follower.description}</p>
+									<button  className="btn btn-primary" style={{marginBottom: "20px"}}>{follower.status}</button>
 								</div>
 							</div>
 
+						)
+
+					})
+				}
+							
 						</div>
 				
 			</div>
@@ -122,9 +116,10 @@ class Test extends Component {
 		</div>
 
 
-
-             );
+        );
+       
+        
     }
 }
  
-export default Test;
+export default Home;

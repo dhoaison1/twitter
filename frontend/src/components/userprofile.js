@@ -35,7 +35,7 @@ class UserProfile extends Component {
                         <div className="row">
                             <div className="col-2 text-center font-weight-bold">Tweet</div>
                             <div className="col-2 text-center font-weight-bold"><Link to="/user/following" style={{textDecoration: 'none'}}>Following</Link></div>
-                            <div className="col-2 text-center font-weight-bold">Follower</div>
+                            <div className="col-2 text-center font-weight-bold"><Link to="/user/follower" style={{textDecoration: 'none'}}>Follower</Link></div>
                             <div className="col-2 text-center font-weight-bold">Favorite</div>
                             <div className="col-2 text-center font-weight-bold">List</div>
                             <div className="col-2 text-center font-weight-bold">Moment</div>
@@ -82,7 +82,7 @@ class UserProfile extends Component {
                         <PostDetail></PostDetail>
     
                     </div>
-                    <div className="col-3">
+                    {/* <div className="col-3">
                         <div className="float-left">
                             <div className="row bg-newfeed p-3">
                                 <h5>New to Twitter?</h5>
@@ -112,7 +112,7 @@ class UserProfile extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 {/* Enc */}
             </div>

@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
-import Test from '../components/test';
+import Follower from '../components/follower';
 
 const mapStateToProps = state => ({
         user: state.userReducer,
-        post: state.postReducer
+        post: state.postReducer,
+        follower: state.followerReducer
 });
 
 export default connect(
     mapStateToProps,
     null
-)(Test);
+)(Follower);

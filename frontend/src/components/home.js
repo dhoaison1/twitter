@@ -17,7 +17,7 @@ class Home extends Component {
         return (
 		<div className="" style={{marginLeft:10}}>
 			<div className="row">
-				<div className="col-sm-2">
+				<div className="col-sm-2" style={{background: 'lightcyan'}}>
 					<div className="panel panel-default">
 						<div className="panel-body">
 							<span style={{display: 'table',margin: '0 auto'}} ><img className="rounded-circle" alt={user.username} src="images/chalee.jpg" style={{width:100 , height:100}}></img>
@@ -27,7 +27,7 @@ class Home extends Component {
 							<div className="row">
 									<div className="col-3 text-center font-weight-bold"> Tweet</div>
 									<div className="col-4 text-center font-weight-bold"><Link to="/user/following" style={{textDecoration: 'none'}}>Following</Link></div>
-									<div className="col-4 text-center font-weight-bold">Follower</div>
+									<div className="col-4 text-center font-weight-bold"><Link to="/user/follower" style={{textDecoration: 'none'}}>Follower</Link></div>
 								</div>
 								<div className="row">
 									<div className="col-3 text-center font-weight-bold text-success">{user.tweet.number} </div>
@@ -55,17 +55,15 @@ class Home extends Component {
 					<div className="col-6 bg-newfeed">
 						
 						<div className="row">
-							{/* <div className="col-2 text-center font-weight-bold text-danger">Tweet </div>
-							<div className="col-3 text-center font-weight-bold text-danger">Tweet & reply </div>
-							<div className="col-2 text-center font-weight-bold text-danger">Vehicle</div> */}
+						
 							<div className="col-1 "></div>
 							<div className="col-2 "></div>
 							<div className="col-2 "></div>
 							
 
 						</div>
-						<div class="form-group shadow-textarea" style={{color: 'lightblue', marginBottom: 50}}>
-							<textarea class="form-control " placeholder="Write something here..."></textarea>
+						<div className="form-group shadow-textarea" style={{color: 'lightblue', marginBottom: 50}}>
+							<textarea className="form-control " placeholder="Write something here..."></textarea>
 							<button type="button" className="floatRight btn btn-primary btn-md" style={{fontWeight: "bold", float: "right" , marginTop: 5 }}>Submit</button>
 						</div>
 						<PostDetail></PostDetail>
@@ -73,7 +71,7 @@ class Home extends Component {
               </div>
 
 
-				<div className="col-sm-3">
+				<div className="col-sm-3" style={{background: 'lightcyan'}}>
 					<div className="panel panel-default panel-custom">
 						<div className="panel-heading">
 							<h4 style={{textAlign: "center"}} className="panel-title">

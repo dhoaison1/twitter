@@ -20,7 +20,7 @@ class PostDetail extends Component {
                   <p style={{fontWeight: "bold"}}> {post.username}</p>
                   </div>
                   <div className="row">
-                     {post.heading}
+                     <Link to="#">{post.heading}</Link>
                   </div>
                   <div className="row">
                      {post.content}

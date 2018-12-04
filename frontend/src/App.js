@@ -10,8 +10,8 @@ import NavBar from './container/navBar';
 import UserProfile from './container/userProfile';
 import EditProfile from './container/editProfile';
 import HomeComponent from './container/home';
-import Test from './container/test';
 import Following from './container/following';
+import Follower from './container/follower'
 
 
 
@@ -25,8 +25,9 @@ class App extends Component {
             <Route exact path="/" component={HomeComponent}></Route>
             <Route exact path='/user' component={UserProfile}></Route>
             <Route exact path='/user/edit' component={EditProfile}></Route>
-            <Route exact path='/test' component={Test}></Route>
             <Route exact path='/user/following' component={Following}></Route>
+            <Route exact path='/user/follower' component={Follower}></Route>
+
 
 
           </div>
