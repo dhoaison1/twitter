@@ -15,14 +15,18 @@ class Home extends Component {
 		const { user } = this.state;
 		console.log(this.state);
         return (
-		<div className="" style={{marginLeft:10}}>
+		<div className="" >
 			<div className="row">
-				<div className="col-sm-2" style={{background: 'lightcyan'}}>
+				<div className="col-3" style={{background: 'lightcyan'}}>
 					<div className="panel panel-default">
 						<div className="panel-body">
 							<span style={{display: 'table',margin: '0 auto'}} ><img className="rounded-circle" alt={user.username} src="images/chalee.jpg" style={{width:100 , height:100}}></img>
-							<p  style={{textAlign: 'center' , fontWeight: 'bold'}}>{user.username}</p>
-							
+							<p  style={{textAlign: 'center' , fontWeight: 'bold'}}><Link to="/user" style={{textDecoration: 'none'}}>{user.username}</Link> </p>
+							{/* <Link to='/user'>
+                                <li className="nav-item alignRignt accoutInfor ">
+                                    <div style={{color: 'black', textDecoration: 'none'}}>{user.username}</div>
+                                </li>
+                            </Link> */}
 							</span>
 							<div className="row">
 									<div className="col-3 text-center font-weight-bold"> Tweet</div>
@@ -63,7 +67,7 @@ class Home extends Component {
 
 						</div>
 						<div className="form-group shadow-textarea" style={{color: 'lightblue', marginBottom: 50}}>
-							<textarea className="form-control " placeholder="Write something here..."></textarea>
+							<textarea className="form-control" placeholder="Write something here..."></textarea>
 							<button type="button" className="floatRight btn btn-primary btn-md" style={{fontWeight: "bold", float: "right" , marginTop: 5 }}>Submit</button>
 						</div>
 						<PostDetail></PostDetail>
@@ -71,16 +75,16 @@ class Home extends Component {
               </div>
 
 
-				<div className="col-sm-3" style={{background: 'lightcyan'}}>
+				<div className="col-3" style={{background: 'lightcyan'}}>
 					<div className="panel panel-default panel-custom">
-						<div className="panel-heading">
-							<h4 style={{textAlign: "center"}} className="panel-title">
+						<div className="panel-heading font-weight-bold mb-3">
+							<h3 style={{textAlign: "center"}} className="panel-title">
 								Who to follow
 								
-							</h4>
+							</h3>
 						</div>
 						<div className="panel-body">
-							<div className="media">
+							<div className="media mb-1">
 								<div className="media-left">
 									<img src="http://placehold.it/32x32" alt="" className="media-object img-rounded"></img>
 								</div>
@@ -93,7 +97,7 @@ class Home extends Component {
 									</a>
 								</div>
 							</div>
-							<div className="media">
+							<div className="media mb-1">
 								<div className="media-left">
 									<img src="http://placehold.it/32x32" alt="" className="media-object img-rounded"></img>
 								</div>
@@ -106,7 +110,7 @@ class Home extends Component {
 									</a>
 								</div>
 							</div>
-							<div className="media">
+							<div className="media mb-1">
 								<div className="media-left">
 									<img src="http://placehold.it/32x32" alt="" className="media-object img-rounded"></img>
 								</div>

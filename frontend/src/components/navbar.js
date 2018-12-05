@@ -16,7 +16,7 @@ class Navbar extends Component {
     render() { 
         const { user } = this.state;
         return ( 
-            //
+            //<CSSTransition>
               <div id="menu" className="row bg-lightc">
               <nav className="navbar navbar-expand-lg navbar-light bg-light textNav " style={{width: "100%"}}>
                   <div className="collapse navbar-collapse" >

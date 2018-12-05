@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { CSSTransition, transit } from "react-css-transition";
 //
-import './style/vendor/fontawesome-free/css/all.min.css';
-import './style/css/sb-admin.css';
-import './style/css/test.css';
+// import './style/vendor/fontawesome-free/css/all.min.css';
+// import './style/css/sb-admin.css';
+// import './style/css/test.css';
 import './style/css/home.css';
+
+
 //
 import NavBar from './container/navBar';
 import UserProfile from './container/userProfile';
@@ -19,6 +22,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+         <CSSTransition>
         <div>
           <NavBar></NavBar>
           <div>
@@ -32,7 +36,7 @@ class App extends Component {
 
           </div>
         </div>
-
+        </CSSTransition>
       </Router>
       
      

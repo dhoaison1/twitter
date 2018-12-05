@@ -16,7 +16,7 @@ class Home extends Component {
 		const { post } = this.state;
 		const { following } = this.state;
         return (
-			<div className="" style={{marginLeft:10}}>
+			<div className="" >
 					{/* left panel  */}
 					<div className="row mt-0">
 						<div className="col-3"></div>
@@ -51,7 +51,7 @@ class Home extends Component {
 
 					{/*  start Heading */}
 			<div className="row">
-				<div className="col-sm-2">
+				<div className="col-3">
 					<div className="panel panel-default">
 						<div className="panel-body">
 							<span style={{display: 'table',margin: '0 auto'}} ><img className="rounded-circle" src="/images/chalee.jpg" style={{width:100 , height:100}}></img>
@@ -87,11 +87,13 @@ class Home extends Component {
 
 					
 				</div>
-				<div className="row col-sm-10" style={{marginTop: 10}}>
+				<div className="col-9" style={{marginTop: 10}}>
+				<div className="row">
 				{
+					
 					following.map((following, index) => {
 						return (
-							<div className="card col-sm-4" >
+							<div className="card col-3 mr-5 pr-0 pl-0" >
 								<img className="card-img-top" src={`/images/${following.headerImage}`} alt="Card image cap"></img>
 								<div className="card-body">
 									<h5 className="card-title">{following.username}</h5>
@@ -130,8 +132,8 @@ class Home extends Component {
 								</div>
 							</div> */}
 
-						</div>
-				
+						</div>		
+						</div>		
 			</div>
 			{/* End Heading */}
 			
