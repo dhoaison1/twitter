@@ -12,18 +12,21 @@ class Home extends Component {
 		}
 	}
 	static getDerivedStateFromProps(nextProps, prevState) {
-		console.log(nextProps);
-		console.log(prevState);
         if(nextProps.user) {
-			console.log(nextProps.user);
             return {
                 user: nextProps.user
             }
         }
         return null;
-    }
+	}
+
+	componentDidMount() {
+		console.log(this.props);
+	}
+	
     render() { 
 		const user = this.state.user.user;
+		console.log(this.props);
         return (
 		<div className="" style={{marginLeft:10}}>
 			<div className="row">

@@ -4,14 +4,12 @@ import { Loggin } from '../action/authentication';
 import { encrypt } from '../action/lib/tx/ulities';
 const { Keypair } = require('stellar-base');
 
-
     
 class Login extends Component {
     state = { 
         privateKey: ''
      }
     handleInputChange = e => {
-        console.log(e.target.value);
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -68,9 +66,9 @@ class Login extends Component {
 const mapDispatchToProps = dispatch => {
     return {
         onLogin: (privateKey, publicKey) => {
-            dispatch(Loggin(privateKey, publicKey))
+            dispatch(Loggin(privateKey, publicKey));
         }
     }
 }
- 
+
 export default connect(null, mapDispatchToProps)(Login);

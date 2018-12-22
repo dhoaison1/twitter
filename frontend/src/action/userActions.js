@@ -1,31 +1,15 @@
-import { UPDATE_USER_INFOR, GET_USER_INFOR } from './type';
-import axios from 'axios';
+import { GET_FOLLOWING_POST } from './type';
 
-export const updateUser = (data) => {
-    return {
-        type: UPDATE_USER_INFOR,
-        payload: data
-    }
-}
-
-
-export const GetUserInfor = (address)  => {
+export const GetFollowingPost = (followingAddress) => {
     return (dispatch) => {
-        return axios.post('/user', {address: address})
-        .then(res => {
-            console.log(res);
-            dispatch(GetUserInforSuccess(res.data))
-        })
-        .catch(err => {
-            console.log(err);
-        })
+        //axios
+        dispatch(GetPostSuccess)
     }
-    
 }
 
-export const GetUserInforSuccess = data => {
+export const GetPostSuccess = data => {
     return {
-        type: GET_USER_INFOR,
+        type: GET_FOLLOWING_POST,
         payload: data
     }
 }

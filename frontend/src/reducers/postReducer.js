@@ -1,31 +1,12 @@
-const initialState = [
-  {
-    id: 1,
-    username: 'Ngoc bui',
-    heading: "Media heading 1",
-    content:
-      "Media heading 1 Dolorem aspernatur rerum, iure? Culpa iste aperiam sequi, fuga, quasi rerum, eum, quo natus tenetur officia placeat."
-  },
-  {
-    id: 2,
-    username: 'Doan Son',
-    heading: "Media heading 2",
-    content:
-      "Media heading 2 Dolorem aspernatur rerum, iure? Culpa iste aperiam sequi, fuga, quasi rerum, eum, quo natus tenetur officia placeat."
-  },
-  {
-    id: 3,
-    username: 'Dinh Quan',
-    heading: "Media heading 3",
-    content:
-      "Media heading 3 Dolorem aspernatur rerum, iure? Culpa iste aperiam sequi, fuga, quasi rerum, eum, quo natus tenetur officia placeat."
-  }
-];
+import { GET_FOLLOWING_POST } from '../action/type';
 
+const initialState = {}
 
-export default (state = initialState, action) => {
+export default (state = initialState , action) => {
     switch (action.type) {
-        default:
-            return state;
+      case GET_FOLLOWING_POST:
+        return action.payload;
+      default:
+        return state;
     }
 }

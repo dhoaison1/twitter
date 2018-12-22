@@ -5,7 +5,7 @@ const mapStateToProps = (state) => ({
     user: state.authenticatedReducer  
 })
 
+
 export default connect(
     mapStateToProps,
-    {}
 )(NavBar);

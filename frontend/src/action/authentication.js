@@ -1,4 +1,4 @@
-import {LOGIN, LOGOUT, GET_USER } from './type';
+import {LOGIN, LOGOUT, GET_USER, GET_FOLLOWING_POST } from './type';
 import Axios from 'axios';
 // 
 const vstruct = require('varstruct');
@@ -18,7 +18,6 @@ export const PlainTextContent = vstruct([
   
 
 var { decodeUpdateMethod } = require('./lib/tx/ulities');
-var { decodeFollowingAddress } = require('./lib/tx/ulities');
 const base32 = require('base32.js');
 
 
@@ -97,10 +96,6 @@ export const Loggin = (privateKey, publicKey) => {
                }
            })
            //get current sequence.
-
-           console.log(array);
-           console.log(user);
-
            dispatch(GetUser(user))
         })
     }
@@ -115,18 +110,18 @@ export const Login = ( publicKey) =>{
     }
 }
 
-export const GetUser = (user) => {
-    return {
-        type: 'GET_USER',
-        payload: user
-    }
-}
 export const Logout = (history) => {
     return {
         type: LOGOUT
     }
 }
 
+export const GetUser = (user) => {
+    return {
+        type: GET_USER,
+        payload: user
+    }
+}
 
 
 //decode function.
