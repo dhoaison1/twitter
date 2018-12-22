@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
-import PostDetail from "../container/postDetail";
+// import PostDetail from "../container/postDetail";
+
 import '../style/css/home.css'
 class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			user: props.user,
-			post: props.post
+			user: {}
 		}
 	}
+	static getDerivedStateFromProps(nextProps, prevState) {
+		console.log(nextProps);
+		console.log(prevState);
+        if(nextProps.user) {
+			console.log(nextProps.user);
+            return {
+                user: nextProps.user
+            }
+        }
+        return null;
+    }
     render() { 
-		const { user } = this.state;
-		console.log(this.state);
+		const user = this.state.user.user;
         return (
 		<div className="" style={{marginLeft:10}}>
 			<div className="row">
@@ -30,9 +40,9 @@ class Home extends Component {
 									<div className="col-4 text-center font-weight-bold"><Link to="/user/follower" style={{textDecoration: 'none'}}>Follower</Link></div>
 								</div>
 								<div className="row">
-									<div className="col-3 text-center font-weight-bold text-success">{user.tweet.number} </div>
-									<div className="col-4 text-center font-weight-bold text-success">{user.tweet.following}</div>
-									<div className="col-4 text-center font-weight-bold text-success">{user.tweet.follower}</div>
+									<div className="col-3 text-center font-weight-bold text-success">{user.post.length} </div>
+									<div className="col-4 text-center font-weight-bold text-success">{user.following.length}</div>
+									{/* <div className="col-4 text-center font-weight-bold text-success">{user.tweet.follower}</div> */}
 								</div>
 						</div>
 					</div>
@@ -66,7 +76,7 @@ class Home extends Component {
 							<textarea className="form-control " placeholder="Write something here..."></textarea>
 							<button type="button" className="floatRight btn btn-primary btn-md" style={{fontWeight: "bold", float: "right" , marginTop: 5 }}>Submit</button>
 						</div>
-						<PostDetail></PostDetail>
+						{/* <PostDetail></PostDetail> */}
 
               </div>
 

@@ -11,7 +11,9 @@ import UserProfile from './container/userProfile';
 import EditProfile from './container/editProfile';
 import HomeComponent from './container/home';
 import Following from './container/following';
-import Follower from './container/follower'
+import Follower from './container/follower';
+
+import Login from './components/login';
 
 
 
@@ -22,11 +24,12 @@ class App extends Component {
         <div>
           <NavBar></NavBar>
           <div>
-            <Route exact path="/" component={HomeComponent}></Route>
-            <Route exact path='/user' component={UserProfile}></Route>
-            <Route exact path='/user/edit' component={EditProfile}></Route>
-            <Route exact path='/user/following' component={Following}></Route>
-            <Route exact path='/user/follower' component={Follower}></Route>
+            <Route exact path="/home" component={HomeComponent}></Route>
+            {/* <Route exact path='/user' component={UserProfile}></Route> */}
+            {/* <Route exact path='/user/edit' component={EditProfile}></Route> */}
+            {/* <Route exact path='/user/following' component={Following}></Route> */}
+            {/* <Route exact path='/user/follower' component={Follower}></Route> */}
+            <Route exact path='/' component={Login} ></Route>
 
 
 
